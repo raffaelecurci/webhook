@@ -1,0 +1,39 @@
+{
+	"userRepo": "xxx",
+	"passwdRepo": "xxx",
+	"userJenkins": "xxx",
+	"passwdJenkins": "xxx",
+	"localPath": "xxx",
+	"storagePath": "xxx",
+	"repo": [
+		{
+			"url": "https://github.com/raffaelecurci/JavaJ2ee",
+			"language": "Java"
+		},
+		{
+			"url": "https://github.com/raffaelecurci/MSBuild",
+			"language": "C#"
+		},
+		{
+			"url": "https://github.com/raffaelecurci/APPLE",
+			"language": "Swift"
+		}
+	],
+	"jenkins": [
+		{
+			"url": "xxx",
+			"language": "Swift",
+			"job": "Xcode"
+		},
+		{
+			"url": "xxx",
+			"language": "C#",
+			"job": "MSBuild"
+		},
+		{
+			"url": "xxx",
+			"language": "Java",
+			"job": "Freestyle project"
+		}
+	]
+}

@@ -1,0 +1,32 @@
+[
+	{
+		"operation": "shift",
+		"spec": {
+			"head_commit": {
+				"id": "commit"
+			},
+			"commits": {
+				"*": {
+					"committer": {
+						"name": "committerName",
+						"email": "committerEmail",
+						"username": "committerUsername"
+					}
+				}
+			},
+			"repository": {
+				"name": "project",
+				"language": "language"
+			},
+				"html_url": "repository"
+		}
+	},
+	{
+		"operation": "default",
+		"spec": {
+			"*": {
+				
+			}
+		}
+	}
+]

@@ -14,18 +14,70 @@
 
 	<properties>
 		<src.dir>src/main/java</src.dir>
+		<resrc.dir>src/main/java/resources</resrc.dir>
 		<maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<jolt.version>0.1.1</jolt.version>
 	</properties>
 	<build>
 		<sourceDirectory>${src.dir}</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>${resrc.dir}</directory>
+			</resource>
+		</resources>
 	</build>
+
+
+	<repositories>
+		<!-- <repository> -->
+		<!-- <id>Maven Central</id> -->
+		<!-- <url>http://repo.spring.io/plugins-release/</url> -->
+		<!-- <snapshots> -->
+		<!-- <enabled>false</enabled> -->
+		<!-- </snapshots> -->
+		<!-- </repository> -->
+	</repositories>
+
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>2.0.5.RELEASE</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.6</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.offbytwo.jenkins</groupId>
+			<artifactId>jenkins-client</artifactId>
+			<version>0.3.8</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.bazaarvoice.jolt</groupId>
+			<artifactId>jolt-core</artifactId>
+			<version>${jolt.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.bazaarvoice.jolt</groupId>
+			<artifactId>json-utils</artifactId>
+			<version>${jolt.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jgit</groupId>
+			<artifactId>org.eclipse.jgit</artifactId>
+<!-- 			4.8.0.201706111038-r -->
+			<version>3.5.0.201409260305-r</version>
+		</dependency>
+
 	</dependencies>
 
 </project>
