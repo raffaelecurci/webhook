@@ -97,10 +97,20 @@ public class WebHook {
 		localPath=jsonConf.getLocalPath(),
 		storagePath=jsonConf.getStoragePath();
 		
+		root.info(userRepo);
+		root.info(passwdRepo);
+		root.info(userJenkins);
+		root.info(passwdJenkins);
+		root.info(localPath);
+		root.info(storagePath);
+		
 		Repo repoHandler=new Repo();
 		repoHandler.setLogger(root);
 		//repository
 		String localRepo=localPath+jsonInput.get("project").toString();
+		
+		root.info(localRepo);
+		
 		repoHandler.cloneAndPush(jsonInput.get("repository").toString(), localRepo, repo4jenkins.getUrl(), userRepo, passwdRepo);
 		
 		Files.move(new File(localRepo).toPath(), new File(storagePath+jsonInput.get("project").toString()).toPath(), StandardCopyOption.REPLACE_EXISTING);
